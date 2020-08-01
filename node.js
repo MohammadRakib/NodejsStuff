@@ -1,0 +1,150 @@
+///////////////////
+/*command, module, event, lodash package */
+//////////////////
+/////////////////
+
+
+//node js command
+
+//version check
+//node -v
+
+//run javascript in the terminal
+//node
+
+//run .js file
+//node fileName
+
+//install package globaly using npm
+//(npm install -g packageName) or (npm i -g packageName) here 'i' is shortend of install and '-g' means globaly
+
+//install package locally using npm
+//npm init (command for creating package.json file)
+//(npm i --save packagename) or (npm i packagename)  first one was for previous version of node.js 
+
+//install all the packages written on package.json file
+//npm install
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// module
+
+// let count = 1;
+// let counter = ()=>{
+//     console.log(count);
+// }
+// //counter();
+
+// module.exports = {
+//   count, counter
+// }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// event
+// let event = require("events");
+// let util = require("util");
+
+// // old way
+
+// let noBodyBusiness = function(){
+//   this.msg = "it is like no body's business";
+// }
+
+
+
+// util.inherits(noBodyBusiness,event.EventEmitter);
+// let msg1 = new noBodyBusiness();
+
+// msg1.on("noob",()=>{
+//   console.log("old way: ",msg1.msg);
+// });
+
+// msg1.emit("noob");
+
+// //new way
+
+// class noBodyBusiness2 extends event.EventEmitter{
+
+//   constructor(){
+//     super();
+//     this.msg =  "it is like no body's business";
+//   }
+
+// }
+
+// let msg2 = new noBodyBusiness2();
+// msg2.on("pro",()=>{
+//   console.log("new way: ",msg2.msg);
+// });
+// msg2.emit("pro");
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//server
+
+// let http = require('http');
+// let fs = require('fs');
+
+// let server = http.createServer((req, rep) => {
+//   let path = "./view/";
+//   rep.setHeader("content-type", "text/html");
+
+//   if(req.url === '/'){
+//     path += "home.html";
+//     rep.statusCode = 200;
+//   }else if(req.url === '/about'){
+//     path += "about.html";
+//     rep.statusCode = 200;
+//   }else if(req.url === '/about-me'){
+//     rep.statusCode = 301;
+//     rep.setHeader("Location","/about");
+//     rep.end();
+
+//   }else{
+//     path += "error.html";
+//     rep.statusCode = 404;
+//   }
+
+//   fs.readFile(path, (err, data) => {
+//     if (err) {
+//       console.log(err);
+//       rep.end();
+//     }else{
+//       rep.write(data);
+//       rep.end();
+//     }
+     
+//   });
+// });
+
+// server.listen(3000, "localhost", () => {
+//   console.log("listening");
+// });
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//lodash 3rd party pakage
+// const _ = require('lodash');
+
+
+// let great = _.once(()=>{
+//   console.log(_.random(0,20));
+// });
+
+// great(); // run once
+// great(); // not second time
+
+//there are a lot more
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
